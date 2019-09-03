@@ -1,0 +1,26 @@
+reactive:
+  feign:
+    cloud:
+      enabled: false
+    ribbon:
+      enabled: false
+    logger:
+      enabled: true
+    client:
+      config:
+        kafka-connect:
+          name: kafka-connect
+          url: localhost:8083
+        kafka-rest:
+          name: kafka-rest
+          url: localhost:8082
+
+logging:
+  level:
+    sall.good.confluent.etl.practice.client: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
